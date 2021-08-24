@@ -44,6 +44,45 @@ videoBtns.forEach(element => {
 let textWrapper = document.querySelector('#text-typing');
 let dataArray = JSON.parse(textWrapper.getAttribute('data-text'));
 
+display()
+async function display(){
+    while (true) {
+        for (const element of dataArray) {
+            for(const letter of element){
+                linetyping()
+                await delay(200);
+                textTyping(letter);
+                
+                
+            }
+            linetyping()
+            await delay(700);
+            for (const letter of element) {
+                linetyping()
+                await delay(200);
+                deleteLetter(); 
+            }
+        }
+    }
+}
 
+function delay(time){
+    return new Promise(resolve =>{
+        setInterval(resolve, time)
+    })
+}
 
+function textTyping(letter){
+    let span = document.createElement('span');
+    span.innerText = letter;
+    textWrapper.appendChild(span);
+}
+async function linetyping(){
+    textWrapper.lastChild.classList.add('span-active');
+    await delay(200);
+    document.querySelector('.span-active').classList.toggle('span-active')
+}
+function deleteLetter() {
+    textWrapper.lastChild.remove();
+}
 
