@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Travel</title>
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <h1>travel</h1>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#travel">travel</a>
+            <a href="#book now">book now</a>
+            <a href="#gallery">gallery</a>
+            <a href="#weekend">weekend</a>
+            <a href="#blog">blog</a>
+        </nav>
+        <div class="search-div">
+            <input type="search" placeholder="search here" id="search-bar">
+            <label for="search-bar"><i class="fas fa-search" id="search-btn"></i></label>
+            <span class="fas fa-bars" id="menu-btn"></span>
+        </div>
+    </header>
+
+    <!-- home section -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1 id="text-typing" data-text='["happiness is closer than you think","adventure awaits, go find it.", "do not be a tourist, be a tranveler"]'>tranvel makes perfect</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem eum ex quod, quas veniam eligendi accusamus nulla ducimus explicabo ipsam tempore laudantium nostrum animi molestiae, quo atque at harum?</p>
+            <button class="btn">discover more</button>
+        </div>
+        <div class="controller-wrapper">
+            <span class="controller active" data-src="static/videos/vid-1.mp4"></span>
+            <span class="controller" data-src="static/videos/vid-2.mp4"></span>
+            <span class="controller" data-src="static/videos/vid-3.mp4"></span>
+        </div>
+        <div class="video-wrapper">
+            <video id="video-tag" src="static/videos/vid-1.mp4" autoplay muted loop></video>
+        </div>
+    </section>
+
+
+    
+
+
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
